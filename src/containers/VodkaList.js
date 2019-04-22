@@ -5,7 +5,7 @@ import Loader from 'react-loader-spinner'
 
 import Cocktail from '../components/Cocktail';
 
-const Cocktails = () => {
+const VodkaList = () => {
 
     const [cocktails, setCocktails] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +15,7 @@ const Cocktails = () => {
     const getCocktails = async() => {
         setIsLoading(true);
         try {
-            const data = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Rum');
+            const data = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka');
             setCocktails(data.data.drinks);
             setIsLoading(false);
         } catch(e) {
@@ -59,4 +59,4 @@ const Cocktails = () => {
   )
 }
 
-export default Cocktails;
+export default VodkaList;

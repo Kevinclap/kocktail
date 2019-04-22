@@ -5,7 +5,7 @@ import Loader from 'react-loader-spinner'
 
 import Cocktail from '../components/Cocktail';
 
-const Cocktails = () => {
+const RumList = () => {
 
     const [cocktails, setCocktails] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
@@ -59,4 +59,4 @@ const Cocktails = () => {
   )
 }
 
-export default Cocktails;
+export default RumList;
